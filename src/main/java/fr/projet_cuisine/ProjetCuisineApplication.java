@@ -1,14 +1,13 @@
 package fr.projet_cuisine;
 
+import fr.projet_cuisine.repository.Customer;
+import fr.projet_cuisine.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import fr.projet_cuisine.repository.Customer;
-import fr.projet_cuisine.repository.CustomerRepository;
 
 @SpringBootApplication
 public class ProjetCuisineApplication {
@@ -18,8 +17,10 @@ public class ProjetCuisineApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetCuisineApplication.class, args);
 	}
+
+
 	@Bean
-	public CommandLineRunner demo(CustomerRepository repository) {
+	public CommandLineRunner fillUpDb(CustomerRepository repository) {
 		return (args) -> {
 			// save a couple of customers
 			repository.save(new Customer("Jack", "Bauer"));
@@ -48,9 +49,7 @@ public class ProjetCuisineApplication {
 			// fetch customers by last name
 			log.info("Customer found with findByLastName('Bauer'):");
 			log.info("--------------------------------------------");
-			repository.findByLastName("Bauer").forEach(bauer -> {
-				log.info(bauer.toString());
-			});
+			repository.findByLastName("Bauer").forEach(bauer -> log.info(bauer.toString()));
 			// for (Customer bauer : repository.findByLastName("Bauer")) {
 			// 	log.info(bauer.toString());
 			// }
