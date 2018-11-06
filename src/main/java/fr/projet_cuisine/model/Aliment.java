@@ -14,7 +14,7 @@ public class Aliment {
 
     private String name;
 
-    private int duree;
+    private int dureeConservation;
 
     public Aliment(String name) {
         this.name = name;
@@ -32,11 +32,11 @@ public class Aliment {
         this.name = name;
     }
 
-    public int getDuree() {
-        return duree;
+    public int getDureeConservation() {
+        return dureeConservation;
     }
 
-    public void setDuree(int duree) {
-        this.duree = duree;
+    public void setDureeConservation(int dureeConservation) {
+        this.dureeConservation = dureeConservation;
     }
 }
