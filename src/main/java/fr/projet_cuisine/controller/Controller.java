@@ -1,7 +1,7 @@
 package fr.projet_cuisine.controller;
 
-import fr.projet_cuisine.repository.Customer;
-import fr.projet_cuisine.repository.CustomerRepository;
+import fr.projet_cuisine.model.Aliment;
+import fr.projet_cuisine.repository.AlimentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
 	@Autowired
-	private CustomerRepository repository;
+	private AlimentRepository repository;
 	
 	@GetMapping("/all")
-	public Iterable<Customer> listAll() {
+	public Iterable<Aliment> listAll() {
 		return repository.findAll();
 	}
 

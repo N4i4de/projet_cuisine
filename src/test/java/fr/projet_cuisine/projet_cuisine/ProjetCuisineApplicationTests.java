@@ -56,7 +56,6 @@ public class ProjetCuisineApplicationTests {
 		inrepo.findById(1L)
 				.ifPresent(ingredient -> Assert.assertEquals("farine", ingredient1prime.getAliment().getName()));
 
-		//Assert.assertEquals("farine", aliment1prime.getName());
 	}
 
 
