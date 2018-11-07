@@ -39,4 +39,13 @@ public class Aliment {
     public void setDureeConservation(int dureeConservation) {
         this.dureeConservation = dureeConservation;
     }
+
+    @Override
+    public String toString() {
+        return "Aliment{" +
+                "Id=" + Id +
+                ", name='" + name + '\'' +
+                ", dureeConservation=" + dureeConservation +
+                '}';
+    }
 }

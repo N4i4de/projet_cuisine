@@ -1,9 +1,6 @@
 package fr.projet_cuisine.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Ingredient {
@@ -14,7 +11,7 @@ public class Ingredient {
 
     @ManyToOne
     private Aliment aliment;
-
+    @OneToOne
     private Quantite quantite;
 
     public Aliment getAliment() {
