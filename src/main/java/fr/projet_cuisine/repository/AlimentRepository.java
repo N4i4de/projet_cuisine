@@ -10,4 +10,5 @@ public interface AlimentRepository extends CrudRepository<Aliment, Long> {
     List<Aliment> findByName(String Name);
 
     List<Aliment> findAll();
+
 }
