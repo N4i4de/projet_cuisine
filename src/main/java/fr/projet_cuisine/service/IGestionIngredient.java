@@ -1,19 +1,20 @@
 package fr.projet_cuisine.service;
 
 import fr.projet_cuisine.model.Aliment;
+import fr.projet_cuisine.model.Ingredient;
 
 import java.util.List;
 
 public interface IGestionIngredient {
-    public List<Aliment> getIngredientByAliment(Aliment aliment);
+    public List<Ingredient> getIngredientByAliment(Aliment aliment);
 
-    public List<Aliment> getAllIngredients();
+    public List<Ingredient> getAllIngredients();
 
-    public List<Aliment> getIngredientByDuree();
+    public List<Ingredient> getIngredientByDuree();
 
-    public List<Aliment> getIngredientByNameAliment();
+    public List<Ingredient> getIngredientByNameAliment();
 
-    public void saveIngredient(Aliment Ingredient);
+    public void saveIngredient(Ingredient ingredient);
 
 
 }
